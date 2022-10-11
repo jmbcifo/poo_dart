@@ -14,4 +14,11 @@ void main(List<String> args) {
   persona1.bio = "Esto es un nuevo valor";
 
   print(persona1.bio);
+
+  final Persona persona2 = new Persona.persona1("Maria");
+
+  print(persona2.nombre);
+  print(persona2.edad);
+
+  print(Persona().toString());
 }

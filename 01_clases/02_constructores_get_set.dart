@@ -11,6 +11,10 @@ class Persona {
     //this.bio,
   });
 
+  Persona.persona1(this.nombre) {
+    this.edad = 30;
+  }
+
   //Get y sets
 
   void set bio(String texto) {
@@ -20,4 +24,8 @@ class Persona {
   String get bio {
     return _bio;
   }
+
+  //Métodos
+  @override
+  String toString() => '$nombre $edad $_bio';
 }

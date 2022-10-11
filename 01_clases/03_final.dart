@@ -1,4 +1,4 @@
-class Cuadrado {
+/* class Cuadrado {
   final int lado;
   final int area;
 
@@ -18,8 +18,30 @@ Error => Un set no puede ser inicializado como final
         this.area = lado * lado;
 }
 
+*/
+
+class Cuadrado {
+  int _lado;
+  int _area;
+  Cuadrado()
+      : this._area = 0,
+        this._lado = 0;
+
+  set lado(int lado) {
+    _lado = _lado;
+    _area = lado * lado;
+  }
+
+  int get area => _area;
+
+  int get lado => _lado;
+}
+
 void main() {
-  final Cuadrado cuadrado = new Cuadrado(10);
+  Cuadrado cuadrado = new Cuadrado();
+
+  cuadrado.lado = 10;
+
   print(cuadrado.lado);
   print(cuadrado.area);
 }
